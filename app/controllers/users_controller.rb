@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   def new
   	@user = User.new
   end
@@ -6,8 +7,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.create(user_params)
   	if @user.save
-  		# login @user
-
+  		login @user
   	else
   		render 'new'
   	end

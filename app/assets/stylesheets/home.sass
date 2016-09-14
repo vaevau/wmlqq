@@ -1,0 +1,107 @@
+.container
+	background-color: green
+	width: 70%
+	height: 600px
+	margin: 60px 
+.sidebar
+	width: 10%
+	height: 600px
+	background-color: #34a3f5
+	float: left
+	img 
+		position: relative
+		top: 80px
+		left: 25px
+	.fa-circle
+		position: relative
+		top: 100px
+		left: -10px
+		font-size: 12px
+		color: #0eec0e
+	.fa-comment-o
+		position: relative
+		top: 170px
+		left: -25px
+		font-size: 20px
+		color: #fff
+	.fa-user
+		position: relative
+		top: 220px
+		left: -50px
+		font-size: 20px
+		color: #fff
+	.fa-users
+		position: relative
+		top: 250px
+		left: 30px
+		font-size: 20px
+		color: #fff
+	.fa-plus
+		position: relative
+		top: 400px
+		left: 5px
+		font-size: 20px
+		color: #fff
+.chats
+	width: 20%
+	height: 600px
+	background-color: #dfe4e4
+	float: left
+	.search
+		height: 70px
+		border-bottom: 1px solid #c7cccc
+		input[type="text"]
+			height: 10px
+			width: 70%
+			margin-top: 20px
+			margin-left: 30px
+			outline: none
+			box-shadow: none
+			background-color: #c1bcbc
+			border-radius: 3px
+		input[type="text"]:focus
+			background-color: #fff
+			box-shadow: none
+
+		input:focus + i.fa-search 
+			display: none
+		.fa-search
+			margin-left: -140px
+	.all-chats
+		height: 500px
+		overflow: auto
+		.chat-p
+			height: 50px
+			border-bottom: 1px solid #c7cccc
+			img
+				float: left
+				margin-left: 20px
+				margin-top: 5px
+			span
+				position: relative
+				left: 20px
+				top: 20px
+				font-size: 14px
+.chat
+	width: 70%
+	height: 600px
+	background-color: #fff
+	float: right
+	.chat-top
+		height: 70px
+		border-bottom: 1px solid #c7cccc
+		h2 
+			padding-top: 25px
+			margin-left: 20px
+	.chat-bottom
+		height: 500px
+	.chat-main
+		float: left
+		width: 75%
+		height: 530px
+		border-right: 1px solid #c7cccc
+		.chat-messages
+			height: 380px
+			border-bottom: 1px solid #c7cccc
+	.chat-members
+		height: 530px

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'friendships/new'
+
+  get 'friendships/create'
+
 	root 'home#index'
 	
   get    '/login',  to: 'sessions#new'

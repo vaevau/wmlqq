@@ -4,10 +4,10 @@
 		<i class="fa fa-search" aria-hidden="true"></i>
 	</div>
 	<div class="all-chats">
-		<% 20.times do  %>
+		<% @friends.each do |friend| %>
 			<div class="chat-p">
 				<%= image_tag "vau.JPG" %>
-				<span>Vau</span>
+				<span><%= friend.name %></span>
 			</div>
 		<% end %>
 	</div>

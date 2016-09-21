@@ -6,6 +6,7 @@ $(document).on 'turbolinks:load', ->
 
 	addFriendBlock = () -> 
 		$('.fa-plus').on "click", () ->
+			$('.results').html('')
 			$('.add-friend').removeClass("none-block").addClass("block")
 				
 	$('.add-friend').draggable(
@@ -16,6 +17,7 @@ $(document).on 'turbolinks:load', ->
 
 	$('.fa-times-circle').on "click", ->
 		$('.add-friend').removeClass("block").addClass("none-block")
+		$('.search-box').val('')
 
 	clickToFindFriend = () ->
 		$('.search-button').on "click", ->
@@ -26,16 +28,23 @@ $(document).on 'turbolinks:load', ->
 				data: { search: search},
 				success: (data) ->
 					$('.results').html('')
-					$('.add-friend').css("height": "140px")
 					resultsBlock = showFriend(data)
-					$('.results').append(resultsBlock)
-					clickToAddFriend(data.id)
+					if data.error_message is undefined
+						$('.add-friend').css("height": "140px")
+						$('.results').append(resultsBlock)
+						clickToAddFriend(data.id)
+					else
+						$('.add-friend').css("height": "100px")
+						$('.results').append(resultsBlock)
 				error: (data) ->
-					console.log data
+
 			})
 
 	showFriend = (data) ->
-		"<div class='right-results'><img src='/assets/vau-cde42f7c479390b9d36bc4c2263483fe29711cd5eeb7da8e361266dcc7fc32ec.JPG' alt='vau'><span>" + data.name + "</span><button class='add-button'>Add</button></div>"
+		if data.error_message is undefined
+			"<div class='right-results'><img src='/assets/vau-cde42f7c479390b9d36bc4c2263483fe29711cd5eeb7da8e361266dcc7fc32ec.JPG' alt='vau'><span>" + data.name + "</span><button class='add-button'>Add</button></div>"
+		else
+			"<div class='error-results'>" + data.error_message + "</div>"
 
 	clickToAddFriend = (friend_id) ->
 		$('.add-button').on "click", ->

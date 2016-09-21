@@ -13,6 +13,16 @@ class UsersController < ApplicationController
   	end
   end
 
+  def search 
+    search = params[:search]
+    @user = User.find_by(name: search)
+    if @user
+      render json: @user
+    else
+      render json: {error_message: 'User not found'}
+    end
+  end
+
   private
 
   def user_params

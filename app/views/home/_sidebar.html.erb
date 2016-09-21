@@ -1,8 +1,11 @@
 <div class="sidebar">
 	<%= image_tag("vau.JPG") %>
-	<i class="fa fa-circle" aria-hidden="true"></i>
-	<i class="fa fa-comment-o" aria-hidden="true"></i>
-	<i class="fa fa-user" aria-hidden="true"></i>
-	<i class="fa fa-users" aria-hidden="true"></i>
-	<i class="fa fa-plus" aria-hidden="true"></i>
+	<%= fa_icon "circle"  %>
+	<%= fa_icon "comment-o" %>
+	<%= fa_icon "user" %>
+	<%= fa_icon "users" %>
+	<%= fa_icon "plus" %>
+	<%= link_to logout_path , method: :delete do %>
+		<%= fa_icon "sign-out" %>
+	<% end %>
 </div>

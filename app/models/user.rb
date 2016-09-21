@@ -1,6 +1,10 @@
 class User < ApplicationRecord
 	has_secure_password
-	NAME_REGEX = /\w+/
+
+	has_many :friendships
+	has_many :friends, :through => :friendships
+
+	# NAME_REGEX = /\w+/
 	PERMITTED_ATTRS = [
 		:name,
 		:password,
@@ -9,7 +13,7 @@ class User < ApplicationRecord
 	
 	validates :name, presence: true,
 									 uniqueness: { case_sensitive: false},
-									 format: { with: /\A#{NAME_REGEX}\z/i },
+									 # format: { with: /\A#{NAME_REGEX}\z/i },
 									 length: { maximum: 15 }
 
   validates :password, length: { minimum: 6 },

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+
+  get 'messages/create'
+
 	root 'home#index'
 	
   get    '/login',  to: 'sessions#new'

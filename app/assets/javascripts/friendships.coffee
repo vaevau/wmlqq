@@ -59,6 +59,13 @@ $(document).on 'turbolinks:load', ->
 					$('.results').html(data.data)
 			})
 
+	clickToTalk = () ->
+		$('.chat-p').on "click", ->
+			$(this).css("background-color": "#bbc1c1")
+			$('.chat-p').not(this).css("background-color": "#dfe4e4")
+			$('textarea').focus()
+
 	addFriendBlock()
 	clickToFindFriend()
+	clickToTalk()
 	

@@ -5,17 +5,12 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-  	friendship = FriendShip.create(friend_params) 
-  	if friendship.save?
-  		redirect_to :root_url
+  	friendship = Friendship.create(user_id: current_user.id, friend_id: params[:friend_id]) 
+  	if friendship.save
+  		render json: {data: "add success"}
   	else
-  		render 'new'
+  		render json: {data: "failed"}
   	end
   end
 
-  private
-
-  def friend_params
-  	params.require(:friendship).permit(:user_id, :friend_id)
-  end
 end

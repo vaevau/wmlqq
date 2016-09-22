@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def log_in_user
-  	unless log_in?
+  	unless logged_in?
   		flash[:danger] = "Please log in."
   		redirect_to login_url
   	end

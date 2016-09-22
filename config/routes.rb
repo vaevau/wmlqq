@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'messages/index'
-
-  get 'messages/create'
-
 	root 'home#index'
 	
   get    '/login',  to: 'sessions#new'
@@ -15,5 +11,6 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
   resources :home, 	only: [:index]
   resources :friendships, only: [:new, :create]
+  resources :messages, only: [:index, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

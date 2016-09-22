@@ -21,8 +21,7 @@ class User < ApplicationRecord
   										 presence: true
 
   def all_friends
-  	ids = Friendship.where(friend_id: self.id).map(&:user_id)
-  	frs = User.where(id: ids)
-  	friends + frs
+  	ids = Friendship.where(friend_id: id).map(&:user_id)
+  	friends + User.where(id: ids)
   end
 end

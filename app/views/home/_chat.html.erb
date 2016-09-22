@@ -1,22 +1,26 @@
 <div class="chat">
-	<div class="chat-top">
-		<h2>Vau</h2>
-	</div>
+	<% friends.each do |friend| %> 
+		<div class='none-block <%= "chat-container-#{friend.id}" %>'>
+			<div class="chat-top">
+				<h2><%= friend.name %></h2>
+			</div>
 
-	<div class="chat-bottom">
-		<div class="chat-main">
-			<div class="chat-messages"></div>
-			<div class="chat-box">
-				<div class="chat-tools">
-					<i class="fa fa-smile-o" aria-hidden="true"></i>
-					<i class="fa fa-scissors" aria-hidden="true"></i>
-				</div>
-				<div class="send-message-box">
-					<textarea autofocus></textarea>
+			<div class="chat-bottom">
+				<div class="chat-main">
+					<div class="chat-messages"></div>
+					<div class="chat-box">
+					<div class="chat-tools">
+						<i class="fa fa-smile-o" aria-hidden="true"></i>
+						<i class="fa fa-scissors" aria-hidden="true"></i>
+					</div>
+					<div class="send-message-box">
+						<textarea autofocus></textarea>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="chat-members"></div>
+			<div class="chat-members"></div>
+		</div>
+		</div>
+		<% end %>
 	</div>
-</div>

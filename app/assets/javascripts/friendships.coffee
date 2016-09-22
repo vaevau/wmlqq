@@ -63,6 +63,15 @@ $(document).on 'turbolinks:load', ->
 		$('.chat-p').on "click", ->
 			$(this).css("background-color": "#bbc1c1")
 			$('.chat-p').not(this).css("background-color": "#dfe4e4")
+
+			classNames = $(this).attr('class').split(' ')
+			pIdArr = classNames[classNames.length - 1].split('-')
+			pId = pIdArr[pIdArr.length - 1]
+
+			$('.chat .none-block').hide()
+			$('.chat-container-' + pId).show()
+			console.log '.chat-container-' + pId
+
 			$('textarea').focus()
 
 	addFriendBlock()

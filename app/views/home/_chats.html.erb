@@ -5,7 +5,7 @@
 	</div>
 	<div class="all-chats">
 		<% friends.each do |friend| %>
-			<div class="chat-p">
+			<div class='chat-p <%= "p-#{friend.id}" %>'>
 				<%= image_tag "vau.JPG" %>
 				<span><%= friend.name %></span>
 			</div>

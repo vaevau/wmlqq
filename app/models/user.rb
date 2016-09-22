@@ -24,4 +24,5 @@ class User < ApplicationRecord
   	ids = Friendship.where(friend_id: id).map(&:user_id)
   	friends + User.where(id: ids)
   end
+
 end

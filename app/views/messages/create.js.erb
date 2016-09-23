@@ -1,0 +1,8 @@
+var content = "<%= @message[:content].to_s rescue '' %>"
+var friend_id = "<%= @message[:friend_id].to_s rescue '' %>"
+
+console.log(content)
+
+$(".chat-container-" + friend_id + " .chat-messages").append("<div class='p-self'>" + 
+    	"<img src='/assets/vau-cde42f7c479390b9d36bc4c2263483fe29711cd5eeb7da8e361266dcc7fc32ec.JPG'/ alt='vau'>" + 
+    	"<div style='margin-left: -65px'>" +	content + "</div></div>")

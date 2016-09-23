@@ -1,50 +1,51 @@
 .container
 	width: 70%
 	height: 600px
-	margin: 60px 
+	margin: 20px auto 
 .sidebar
 	width: 10%
 	height: 600px
 	background-color: #34a3f5
 	float: left
+	position: relative
+
+	img, .fa-circle, .fa-comment-o, .fa-user, .fa-users, .fa-plus, .fa-sign-out
+		left: 0px
+		right: 0px
+		margin: auto
+		position: absolute
 	img 
-		position: relative
-		top: 80px
-		left: 25px
+		
+		top: 14px
+		margin: auto
 	.fa-circle
-		position: relative
-		top: 100px
-		left: -10px
+		top: 60px
+		width: 12px
 		font-size: 12px
 		color: #0eec0e
 	.fa-comment-o
-		position: relative
-		top: 170px
-		left: -25px
+		top: 140px
+		width: 22px
 		font-size: 20px
 		color: #fff
 	.fa-user
-		position: relative
-		top: 220px
-		left: -50px
+		top: 250px
+		width: 22px
 		font-size: 20px
 		color: #fff
 	.fa-users
-		position: relative
-		top: 250px
-		left: 30px
+		top: 380px
+		width: 26px
 		font-size: 20px
 		color: #fff
-	.fa-plus
-		position: relative
-		top: 400px
-		left: 5px
+	.fa-plus		
+		bottom: 80px
+		width: 22px
 		font-size: 20px
 		color: #fff
-	.fa-sign-out
-		position: relative
-		top: 430px
-		left: -15px
+	.fa-sign-out		
+		bottom: 40px		
+		width: 22px
 		font-size: 20px
 		color: #fff
 .chats
@@ -52,14 +53,18 @@
 	height: 600px
 	background-color: #dfe4e4
 	float: left
+	position: relative
 	.search
 		height: 70px
 		border-bottom: 1px solid #c7cccc
 		input[type="text"]
+			position: absolute
+			left: 0
+			right: 0
+			top: 20px
 			height: 10px
 			width: 70%
-			margin-top: 20px
-			margin-left: 30px
+			margin: auto
 			outline: none
 			background-color: #c1bcbc
 			border-radius: 3px
@@ -69,7 +74,12 @@
 		input:focus + i.fa-search 
 			display: none
 		.fa-search
-			margin-left: -140px
+			position: absolute
+			top: 27px
+			left: 20%
+			display: block
+			
+
 	.all-chats
 		height: 500px
 		overflow: auto

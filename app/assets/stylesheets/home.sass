@@ -91,6 +91,8 @@
 	height: 600px
 	background-color: #fff
 	float: right
+	div:first-child
+		display: block
 	.chat-top
 		height: 70px
 		border-bottom: 1px solid #c7cccc
@@ -107,6 +109,43 @@
 		.chat-messages
 			height: 380px
 			border-bottom: 1px solid #c7cccc
+			div
+				width: 100%
+				margin-top: 10px
+			.chat-content
+				span
+					position: relative
+					font-size: 14px
+					top: -10px
+				img
+					width: 30px
+					height: 30px
+					margin-left: 20px
+					margin-top: 5px
+				div
+					border-radius: 4px
+					background-color: #f9dfe6
+					width: 80%
+					margin-left: 40px
+					margin-top: -2px
+					padding: 5px 5px
+					font-size: 14px
+			.p-self
+				float: right
+				div
+					border-radius: 4px
+					background-color: #f9dfe6
+					width: 80%
+					float: left
+					margin-top: 20px
+					margin-left: 40px
+					padding: 5px 5px
+					font-size: 14px
+				img
+					width: 30px
+					height: 30px
+					float: right
+					margin-right: 20px
 		.chat-box
 			.chat-tools
 				height: 30px
@@ -119,7 +158,7 @@
 				textarea
 					resize: none
 					width: 100%
-					height: 117px
+					height: 108px
 					&:focus
 						outline: none
 	.chat-members
@@ -170,3 +209,6 @@
 			.add-button
 				float: right
 				margin-right: 50px
+		.error-results
+			color: red
+			margin-left: 30px

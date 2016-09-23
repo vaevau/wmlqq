@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
 	has_many :friendships
 	has_many :friends, :through => :friendships
+	has_many :messages
 
 	# NAME_REGEX = /\w+/
 	PERMITTED_ATTRS = [
@@ -18,5 +19,10 @@ class User < ApplicationRecord
 
   validates :password, length: { minimum: 6 },
   										 presence: true
+
+  def all_friends
+  	ids = Friendship.where(friend_id: id).map(&:user_id)
+  	friends + User.where(id: ids)
+  end
 
 end

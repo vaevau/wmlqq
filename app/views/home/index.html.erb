@@ -1,7 +1,7 @@
 <div class="container">
 	<%= render 'sidebar' %>
 	<%= render partial: 'chats', locals: {friends: @friends} %>
-	<%= render 'chat' %>
+	<%= render partial: 'chat', locals: {friends: @friends} %>
 </div>
 
 <%= render 'tools' %>

@@ -7,9 +7,9 @@ class MessagesController < ApplicationController
   def create
   	message = current_user.messages.build(message_params)
   	if message.save
-  		ActionCable.server.broadcast "room_channel_user_#{params[:message][:friend_id]}", message
+  		ActionCable.server.broadcast "room_channel_user_#{params[:message][:user_id]}", message
   	else
-  		render 'index'
+  		# render 'index'
   	end
   end
 

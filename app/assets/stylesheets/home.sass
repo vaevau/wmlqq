@@ -113,38 +113,46 @@
 				width: 100%
 				margin-top: 10px
 			.chat-content
+				float: left
 				span
 					position: relative
+					float: left
 					font-size: 14px
-					top: -10px
+					top: 10px
+					left: 10px
 				img
 					width: 30px
 					height: 30px
 					margin-left: 20px
 					margin-top: 5px
+					float: left
 				div
 					border-radius: 4px
 					background-color: #f9dfe6
-					width: 80%
-					margin-left: 40px
-					margin-top: -2px
+					width: auto
+					float: left
+					white-space: nowrap
+					margin-left: -65px
+					margin-top: 30px
 					padding: 5px 5px
 					font-size: 14px
+					text-align: left
 			.p-self
 				float: right
 				div
+					float: right
 					border-radius: 4px
 					background-color: #f9dfe6
-					width: 80%
-					float: left
+					width: auto
+					white-space: nowrap
 					margin-top: 20px
-					margin-left: 40px
 					padding: 5px 5px
 					font-size: 14px
+					text-align: right
 				img
+					float: right
 					width: 30px
 					height: 30px
-					float: right
 					margin-right: 20px
 		.chat-box
 			.chat-tools
@@ -155,6 +163,8 @@
 					font-size: 20px
 					color: #a09494
 			.send-message-box
+				.send-message-button
+					display: none
 				textarea
 					resize: none
 					width: 100%

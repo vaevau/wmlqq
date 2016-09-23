@@ -70,7 +70,6 @@ $(document).on 'turbolinks:load', ->
 
 			$('.chat .none-block').hide()
 			$('.chat-container-' + pId).show()
-			console.log '.chat-container-' + pId
 
 			$('textarea').focus()
 

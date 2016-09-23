@@ -10,15 +10,15 @@
 					<div class="chat-messages">
 						<% Message.chats(current_user.id, friend.id).each do |chat| %>
 							<% if chat.user_id.eql? current_user.id %>
+								<div class="p-self">
+									<%= image_tag "vau.JPG" %>
+									<div><%= chat.content %></div>
+								</div>
+							<% else %>
 								<div class="chat-content">
 									<%= image_tag "vau.JPG" %>
 									<span><%= friend.name %></span>
 									<div><%= chat.content %></div>
-								</div>
-							<% else %>
-								<div class="p-self">
-									<div><%= chat.content %></div>
-									<%= image_tag "vau.JPG" %>
 								</div>
 							<% end %>
 						<% end %>

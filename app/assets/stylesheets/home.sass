@@ -121,11 +121,12 @@
 		.chat-messages
 			height: 380px
 			overflow:  auto						
-			overflow-x: hidden			
+			overflow-x: hidden	
+			position: relative		
 			border-bottom: 1px solid #c7cccc
 			div
 				width: 100%
-				margin-top: 10px
+				margin-top: 40px
 			.chat-content
 				float: left				
 				span
@@ -141,14 +142,16 @@
 					margin-left: 20px
 					margin-top: 5px
 					float: left
+
 				div
+					position: absolute
 					border-radius: 4px
 					background-color: #6495ED
 					width: auto
 					word-wrap: break-word					
 					word-break: break-all
 					float: left						
-					margin-left: 10px
+					left: 60px
 					margin-top: 8px
 					padding: 5px 5px
 					font-size: 14px
@@ -156,23 +159,44 @@
 					color: #fff
 					max-width: 200px
 					line-height: 20px
+				p
+					position: absolute
+					margin-left: 52px
+					margin-top: 12px
+					width: 0px
+					height: 0px
+					border-top: 9px solid transparent
+					border-bottom: 9px solid transparent
+					border-right: 9px solid #6495ED
+					display: block	
+
 			.p-self
 				float: right
-				div
-					float: right
+				div	
+					position: absolute
 					border-radius: 4px
 					background-color: #7FFF00
 					width: auto
 					max-width: 200px
 					word-wrap: break-word	
 					word-break: break-all												
-					margin-top: 6px
-					margin-right: 10px
+					margin-top: 2px
+					right: 60px
 					padding: 5px 5px
 					font-size: 14px
 					text-align: left
 					color: #000
 					line-height: 20px
+				p
+					position: absolute
+					right: 52px
+					margin-top: 7px
+					width: 0px
+					height: 0px
+					border-top: 9px solid transparent
+					border-bottom: 9px solid transparent
+					border-left: 9px solid #7FFF00
+					display: block	
 					
 				img
 					float: right
@@ -182,7 +206,8 @@
 		.chat-box
 			.chat-tools
 				height: 30px
-				
+				position: absolute
+				margin-top: 2px
 				.fa
 					padding-top: 5px
 					margin-left: 20px
@@ -193,9 +218,10 @@
 					display: none
 				textarea
 					resize: none
-					width: 100%
+					width: 49%
 					height: 108px
-
+					position: absolute
+					margin-top: 30px
 					&:focus
 						outline: none
 	.chat-members
@@ -226,13 +252,17 @@
 	.search-results
 		input[type="text"]
 			width: 60%
+			height: 40px
+			border: 1px solid #28a956
+			margin-top: 10px
 			margin-left: 30px
+			border-radius: 4px
 		.search-errors
 			color: red
 			margin-left: 30px
 	.results
 		.right-results
-			margin-left: 30px
+			margin-left: 10px
 			img
 				float: left
 				margin-top: 10px
@@ -244,7 +274,10 @@
 				float: left
 			.add-button
 				float: right
-				margin-right: 50px
+				margin-right: 70px
+				margin-top: 6px
 		.error-results
 			color: red
 			margin-left: 30px
+			margin-top: 6px
+			font-weight: border

@@ -126,20 +126,20 @@
 			border-bottom: 1px solid #c7cccc
 			div
 				width: 100%
-				margin-top: 40px
+				margin-top: 50px
 			.chat-content
 				float: left				
 				span
 					position: relative
 					float: left
 					font-size: 14px
-					top: 10px
+					top: 4px
 					left: 10px
-					display: none
+					
 				img
 					width: 30px
 					height: 30px
-					margin-left: 20px
+					margin-left: 10px
 					margin-top: 5px
 					float: left
 
@@ -152,7 +152,8 @@
 					word-break: break-all
 					float: left						
 					left: 60px
-					margin-top: 8px
+					margin-top: 28px
+					margin-left: -10px
 					padding: 5px 5px
 					font-size: 14px
 					text-align: left					
@@ -161,14 +162,18 @@
 					line-height: 20px
 				p
 					position: absolute
-					margin-left: 52px
-					margin-top: 12px
+					margin-left: 44px
+					margin-top: 28px
 					width: 0px
 					height: 0px
 					border-top: 9px solid transparent
 					border-bottom: 9px solid transparent
 					border-right: 9px solid #6495ED
 					display: block	
+					transform: rotate(135deg)
+					-webkit-transform: rotate(135deg)
+					-o-transform: rotate(135deg)
+					-moz-transform: rotate(135deg)
 
 			.p-self
 				float: right
@@ -218,10 +223,11 @@
 					display: none
 				textarea
 					resize: none
-					width: 49%
+					width: 490px
 					height: 108px
 					position: absolute
 					margin-top: 30px
+				
 					&:focus
 						outline: none
 	.chat-members

@@ -9,7 +9,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     # Called when there's incoming data on the websocket for this channel
     $('.chat-container-' + (data.user_id).toString() + ' .chat-messages').append "<div class='chat-content'>" + 
     	"<img src='/assets/vau-cde42f7c479390b9d36bc4c2263483fe29711cd5eeb7da8e361266dcc7fc32ec.JPG'/ alt='vau'>" + 
-    	"<span>" + data.friend_name + "</span><div style='margin-left: -65px'>" +	data.content + "</div></div>"
+    	"<span>" + data.friend_name + "</span><div style='margin-left: -10px'>" +	data.content + "</div></div>"
 			
 		$(document).on 'turbolinks:load', ->
 			sendMessage()

@@ -7,12 +7,13 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    $('.chat-container-' + (data.user_id).toString() + ' .chat-messages').append "<div class='chat-content'>" + 
+    $('.chat-container-' + (data.user_id).toString() + ' .chat-messages').append "<div style='position:relative;top:-60px;' class='chat-content'>" + 
     	"<img src='/assets/vau-cde42f7c479390b9d36bc4c2263483fe29711cd5eeb7da8e361266dcc7fc32ec.JPG'/ alt='vau'>" + 
     	"<span>" + data.friend_name + "</span><div style='margin-left: -10px'>" +	data.content + "</div></div>"
 			
 		$(document).on 'turbolinks:load', ->
 			sendMessage()
+			$('.chat-messages').scrollTop( $('.chat-messages')[0].scrollHeight )
 			
 		sendMessage = () ->
 			$('textarea').on 'keydown', (event) ->
@@ -21,9 +22,12 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 					$('.send-message-button').click()
 					event.target.value = ""
 					# Turbolinks.visit('/', action: 'replace')
+					
 
 				if (event.ctrlKey or event.metaKey) and event.keyCode is 13
 					txt = $('textarea')
 					$('textarea').val(txt.val() + "\n")
+					
+					
 
 			

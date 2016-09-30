@@ -79,7 +79,7 @@ $(document).on 'turbolinks:load', ->
 			if event.keyCode is 13	
 				 setTimeout -> 
 				   $('.chat-messages').scrollTop( $('.chat-messages')[0].scrollHeight )
-				  ,260
+				  ,240
 	addFriendBlock()
 	clickToFindFriend()
 	clickToTalk()

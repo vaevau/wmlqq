@@ -119,28 +119,30 @@
 		height: 530px	
 		border-right: 1px solid #c7cccc
 		.chat-messages
-			height: 380px
+			height: 360px
 			overflow:  auto						
 			overflow-x: hidden	
 			position: relative		
 			border-bottom: 1px solid #c7cccc
+			> *:last-child
+				padding-bottom: 20px
 			div
 				width: 100%
-				margin-top: 60px
+				margin-top: 20px
 			.chat-content
 				float: left				
 				span
 					position: relative
 					float: left
 					font-size: 14px
-					top: -44px
-					left: 50px
-					
+					top: 10px
+					left: 10px
+					display: none
 				img
 					width: 30px
 					height: 30px
-					margin-left: 10px
-					margin-top: -43px
+					margin-left: 20px
+					margin-top: 5px
 					float: left
 
 				div
@@ -152,28 +154,23 @@
 					word-break: break-all
 					float: left						
 					left: 60px
-					margin-top: -20px
-					margin-left: -10px
+					margin-top: 8px
 					padding: 5px 5px
 					font-size: 14px
 					text-align: left					
 					color: #fff
-					max-width: 200px
+					max-width: 400px
 					line-height: 20px
 				p
 					position: absolute
-					margin-left: 44px
-					margin-top: -20px
+					margin-left: 52px
+					margin-top: 12px
 					width: 0px
 					height: 0px
 					border-top: 9px solid transparent
 					border-bottom: 9px solid transparent
 					border-right: 9px solid #6495ED
 					display: block	
-					transform: rotate(135deg)
-					-webkit-transform: rotate(135deg)
-					-o-transform: rotate(135deg)
-					-moz-transform: rotate(135deg)
 
 			.p-self
 				float: right
@@ -182,10 +179,10 @@
 					border-radius: 4px
 					background-color: #7FFF00
 					width: auto
-					max-width: 200px
+					max-width: 400px
 					word-wrap: break-word	
 					word-break: break-all												
-					margin-top: -40px
+					margin-top: 2px
 					right: 60px
 					padding: 5px 5px
 					font-size: 14px
@@ -195,7 +192,7 @@
 				p
 					position: absolute
 					right: 52px
-					margin-top: -32px
+					margin-top: 7px
 					width: 0px
 					height: 0px
 					border-top: 9px solid transparent
@@ -207,7 +204,6 @@
 					float: right
 					width: 30px
 					height: 30px
-					margin-top: -38px
 					margin-right: 20px
 		.chat-box
 			.chat-tools
@@ -224,11 +220,15 @@
 					display: none
 				textarea
 					resize: none
-					width: 490px
-					height: 108px
+					width: 530px
+					border: none
+					box-shadow: none
+					-moz-box-shadow: none
+					-webkit-box-shadow: none
+					outline: none
+					height: 138px
 					position: absolute
 					margin-top: 30px
-				
 					&:focus
 						outline: none
 	.chat-members
